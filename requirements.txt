@@ -1,0 +1,24 @@
+# Project Light - Python Dependencies
+
+# --- Core Libraries ---
+opencv-python-headless>=4.5.0 # For CV operations (headless for server/RPi without GUI)
+numpy>=1.20.0                # Fundamental package for numerical computation
+pyserial>=3.5                # For potential future serial communication with hardware
+
+# --- AI Vision Stack ---
+# Assuming you were using EasyOCR and then switched to pytesseract
+# If you are sticking with Tesseract:
+Pillow>=9.0.0                # Required by pytesseract for image handling
+pytesseract>=0.3.8           # Python wrapper for Tesseract OCR engine
+
+# If you want to include EasyOCR (optional, if you revert or explore later)
+# easyocr>=1.4.0             # Deep learning based OCR. Can be heavy.
+
+# --- AI Audio Stack ---
+pyaudio>=0.2.11              # For audio input/output
+scipy>=1.7.0                 # For scientific computing, especially FFT in audio analysis
+tensorflow>=2.5.0            # Core TensorFlow library (needed for YAMNet)
+
+# --- General Utilities (potentially used implicitly or explicitly) ---
+# Consider adding specific versions if you encounter issues, e.g.,
+# Flask>=2.0.0               # If you add any web interface or API (future scope)
